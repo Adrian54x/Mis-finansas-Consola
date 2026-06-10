@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administracion\Cuenta.cs" />
+    <Compile Include="Administracion\Deseo.cs" />
+    <Compile Include="Administracion\Finansas.cs" />
+    <Compile Include="General\DatosGlobales.cs" />
+    <Compile Include="General\Funciones.cs" />
+    <Compile Include="General\Menus.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
