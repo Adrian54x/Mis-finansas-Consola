@@ -28,5 +28,14 @@ namespace Mis_finansas_Consola.General
             f.EscribirTexto(ConsoleColor.Red, "0. Regresar.", true, 50, 14);
             f.EscribirTexto(ConsoleColor.Green, "Seleccione una opción:", false, 50, 16);
         }
+
+        public void MenuPresupuesto()
+        {
+            f.EscribirTexto(ConsoleColor.Yellow, "==== Presupuesto ===", true, 50, 6);
+            f.EscribirTexto(ConsoleColor.DarkGreen, "1. Presupuesto general.", true, 50, 8);
+            f.EscribirTexto(ConsoleColor.DarkGreen, "1. Presupuesto de deseos.", true, 50, 10);
+            f.EscribirTexto(ConsoleColor.Red, "0. Regresar.", true, 50, 12);
+            f.EscribirTexto(ConsoleColor.Green, "Seleccione una opción:", false, 50, 14);
+        }
     }
 }

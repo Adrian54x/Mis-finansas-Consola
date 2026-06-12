@@ -11,23 +11,15 @@ namespace Mis_finansas_Consola
     {
         private string nombre;
         private decimal montoMaximo;
-        private bool Pioridad;
+        private bool pioridad;
 
         public string Nombre 
         { 
             get => nombre;
             set
             {
-                bool val = true;
-                foreach (char i in value)
-                {
-                    if(!DatosGlobales.Letras.Contains(i))
-                    {
-                        val = false;
-                        break;
-                    }
-                }
-                nombre = (value.Length >= 3 && val) ? value : throw new ArgumentException("El nombre ingresado no Valido!");
+
+                nombre = (value.Length >= 3 ) ? value : throw new ArgumentException("El nombre ingresado no Valido!");
             }
         }
       
@@ -38,13 +30,13 @@ namespace Mis_finansas_Consola
             set => montoMaximo = (value > Cantidad && decimal.TryParse(value.ToString(), out decimal x)) ? value : throw new ArgumentException("El monto máximo no es mayor que la cantidad inicial!"); 
         }
 
-        public bool Pioridad1 
+        public bool Pioridad 
         { 
-            get => Pioridad; 
-            set => Pioridad = value; 
+            get => pioridad; 
+            set => pioridad = value; 
         }
 
-        public Deseo(DateTime fecha, decimal cantidad, string motivo, string tipo, string nombre, decimal montoMaximo, bool pioridad) : base(fecha, cantidad, motivo, tipo)
+        public Deseo(string codigo, DateTime fecha, decimal cantidad, string motivo, string tipo, string nombre, decimal montoMaximo, bool pioridad) : base(codigo, fecha, cantidad, motivo, tipo)
         {
             Nombre = nombre;
             MontoMaximo = montoMaximo;

@@ -1,3 +1,13 @@
 <Solution>
-  <Project Path="Mis finansas Consola/Mis finansas Consola.csproj" Id="2d054ba0-2025-4b81-9374-94e0838e8428" />
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="ARM64" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Mis finansas Consola/Mis finansas Consola.csproj" Id="2d054ba0-2025-4b81-9374-94e0838e8428">
+    <Platform Solution="*|ARM64" Project="ARM64" />
+    <Platform Solution="*|x64" Project="x64" />
+    <Platform Solution="*|x86" Project="x86" />
+  </Project>
 </Solution>
